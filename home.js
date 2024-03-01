@@ -24,7 +24,8 @@
 //CODE HERE
 
 
-
+const greetUser = (userName) => `Welcome back, ${userName}` // assign the function with one parameter and return the string
+console.log(greetUser("Dan")) // log the greetUser function with a name
 
 
 //////////////////PROBLEM 2////////////////////
@@ -51,8 +52,24 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
-
-
+// function canWeDeliver(zipCode) {
+//     // look through deliveryAreaZipCode array
+//     for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+//         if (zipCode === deliveryAreaZipCodes[i]) {
+//             // if the zipcode is included
+//             console.log(canWeDeliver(85205))
+//             //
+//             return `You're in our delivery zone!`
+            
+//         } else {
+//             // if the zipcode is not included return
+//             console.log(canWeDeliver(88888))
+//             //
+//             return `Sorry, we can't deliver to that address`
+//         }  
+//     }
+// }
+// canWeDeliver()
 /* 
     Problem 2 Continued
 
@@ -72,6 +89,15 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 // CODE HERE
 
+function canWeDeliverTwo(zipCode) {
+    let arr = deliveryAreaZipCodes.includes([])
+    if (zipCode === arr) {
+        console.log(canWeDeliverTwo(85205))
+        return 'In our zone'
+    }
+    return 'Out of our zone'
+} 
+canWeDeliverTwo(8888)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,11 +114,11 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 const deals = [
     {
-        title: '15% Off!', 
+        title: '15% Off!',
         desc: 'Applied to your entire order when you spend $30 or more'
-    }, 
+    },
     {
-        title: 'Free Kids Meal with 2 Regular Entrees', 
+        title: 'Free Kids Meal with 2 Regular Entrees',
         desc: '   This deal lasts until the end of March! '
     }
 ]
@@ -108,11 +134,17 @@ const deals = [
 
 //CODE HERE
 
+// access the deals array at 0 index and change the title
+let newDiscount = deals[0]
 
+// now update the key value 'title' to the new discount
+newDiscount["title"] = "Why don't you have 10% off"
+
+console.log(newDiscount)
 
 /*
     The restaurant is going to continue its
-    family deal for another month. 
+    family deal for another month.
 
     Reassign the value of the second deal's desc
     to be itself, but use the `replace` method
@@ -124,3 +156,10 @@ const deals = [
 */
 
 //CODE HERE
+
+// access the deals array at 1st index postion and change description
+let newMonths = deals[1]
+
+// update the key value 'description' and remove whitespace
+newMonths["desc"].replace("March", 'April').trim()
+console.log(newMonths)

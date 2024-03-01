@@ -32,6 +32,20 @@
 
 //CODE HERE
 
+// create the object
+const pizza = {
+    // add key : 'value'
+    name: "Pepperoni",
+    price: 19,
+    category: "Meat",
+    popularity: 1,
+    rating: 10,
+    tags: [
+        "meat", 
+        "cheese", 
+        "red sauce"
+    ]
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -44,6 +58,7 @@
 
 //CODE HERE
 
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -54,6 +69,8 @@
 
 //CODE HERE
 
+console.log(pizza.tags) // log with dot notation
+console.log(pizza["price"]) // log with bracket
 
 /*
     Third, destructure the price off of the
@@ -64,19 +81,22 @@
 
 //CODE HERE
 
+const { price, newPrice: undefined } = pizza
+newPrice = 35
+console.log(pizza)
 
 /*
     Fourth, and last, destructure the category
     property.
 
-    Print the value of your category variable. 
+    Print the value of your category variable.
 */
 
 //CODE HERE
 
 
 //////////////////PROBLEM 3////////////////////
-/* 
+/*
     Create an array with about 5 objects in it.
     The objects should mimic the `pizza` object.
     Call the array `foodArr`.
@@ -92,7 +112,7 @@
 
 
 //////////////////PROBLEM 4////////////////////
-/* 
+/*
     Let's filter the food objects according
     to their tags.
 
@@ -110,24 +130,24 @@
 
 
 //////////////////PROBLEM 5////////////////////
-/* 
+/*
     Now let's write a function that's a little
     more flexible than just filtering for one
-    value. We want to be able to filter for 
-    food that has above a certain rating, 
+    value. We want to be able to filter for
+    food that has above a certain rating,
     below a certain price, or any other combo.
 
     Write a function called `filterByProperty`
-    that takes in three arguments: `property`, 
-    `number`, and `type. 
+    that takes in three arguments: `property`,
+    `number`, and `type.
 
     The property will be a string (rating,
     popularity, or price)
 
     The number will be the number that you want
-    to compare against 
+    to compare against
 
-    The type should be 'above' or 'below' to 
+    The type should be 'above' or 'below' to
     indicate whether you want to get foods with
     values that are above or below the given number
     for the given property
@@ -137,14 +157,14 @@
 
     Use the filter method to filter the foodArr
 
-        In the callback, check if the `type` is `above`, 
+        In the callback, check if the `type` is `above`,
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
 
         If the type isn't `below`, return objects whose
-        value for the given property is less than the 
+        value for the given property is less than the
         `number` passed in
-    
+
     Return the filtered array from the entire function
 */
 
