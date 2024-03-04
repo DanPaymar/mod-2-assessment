@@ -31,7 +31,24 @@
 
 //CODE HERE
 
+// create a new class Ticket
+class Ticket {
+    // add in the parameters
+    constructor(items, orderTime, customerId) {
+        this.items = items
+        this.orderTime = orderTime
+        this.customerId = customerId
 
+    }
+    // add a constant status property
+    status = "queued"
+
+    // create the update status property
+    updateStatus(newStatus) {
+        this.status = newStatus
+    }
+   
+}
 
 /*
     Create a new instance of your class.
@@ -46,6 +63,8 @@
 
 //CODE HERE
 
+const firstTicket = new Ticket("Pizza, Bread and Soda", 7.03, 575)
+console.log(firstTicket)
 
 /*
     Call the `updateStatus` method on
@@ -54,3 +73,5 @@
 */
 
 //CODE HERE
+
+firstTicket.updateStatus("cooking")
