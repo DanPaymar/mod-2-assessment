@@ -52,24 +52,22 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
-// function canWeDeliver(zipCode) {
-//     // look through deliveryAreaZipCode array
-//     for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
-//         if (zipCode === deliveryAreaZipCodes[i]) {
-//             // if the zipcode is included
-//             console.log(canWeDeliver(85205))
-//             //
-//             return `You're in our delivery zone!`
-            
-//         } else {
-//             // if the zipcode is not included return
-//             console.log(canWeDeliver(88888))
-//             //
-//             return `Sorry, we can't deliver to that address`
-//         }  
-//     }
-// }
-// canWeDeliver()
+function canWeDeliver(zipCode) {
+
+    // loop through deliveryAreaZipCode array
+    for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+        if (deliveryAreaZipCodes[i] === zipCode) {
+            // if the zipcode is included return
+            return `You're in our delivery zone!`
+        }
+    }
+    return `Sorry, we can't deliver to that address`
+}
+// verify correct zipcode
+console.log(canWeDeliver(85205))
+// verify incorrect zipcode
+console.log(canWeDeliver(85105))
+
 /* 
     Problem 2 Continued
 
@@ -89,15 +87,21 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 // CODE HERE
 
+// declare new function
 function canWeDeliverTwo(zipCode) {
-    let arr = deliveryAreaZipCodes.includes([])
-    if (zipCode === arr) {
-        console.log(canWeDeliverTwo(85205))
-        return 'In our zone'
+    // create a new array that verifies if deliveryArea array includes the zipcode
+    const inArea = deliveryAreaZipCodes.includes(zipCode)
+    // use the new inArea array to check if delvery area is equal to zipcode
+    if (inArea) {
+        return `You're in our delivery zone!` // return in zone
     }
-    return 'Out of our zone'
-} 
-canWeDeliverTwo(8888)
+    return `Sorry, we can't deliver to that address` // otherwise return out of zone
+}
+// verify correct zip
+console.log(canWeDeliverTwo(85204))
+
+// verify incorrect zip
+console.log(canWeDeliverTwo(88888))
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -157,9 +161,16 @@ console.log(newDiscount)
 
 //CODE HERE
 
+
+
+// console.log(deals["desc"].replace("March", "April"))
+
+// deals["desc"] = deals.replace("March", "April")
 // access the deals array at 1st index postion and change description
-let newMonths = deals[1]
+// let newMonths = deals[1]
 
 // update the key value 'description' and remove whitespace
-newMonths["desc"].replace("March", 'April').trim()
-console.log(newMonths)
+// newMonths.replace("March", "April")
+
+// console.log(newMonths)
+// console.log(newMonths.replace("March", "April"))

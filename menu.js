@@ -81,9 +81,9 @@ console.log(pizza["price"]) // log with bracket
 
 //CODE HERE
 
-const { price, newPrice: undefined } = pizza
-newPrice = 35
-console.log(pizza)
+const { price } = pizza // take the price off pizza
+pizza.price = 35 // reassign the value
+console.log(pizza) // print the new result
 
 /*
     Fourth, and last, destructure the category
@@ -94,6 +94,9 @@ console.log(pizza)
 
 //CODE HERE
 
+const { category } = pizza // take category off pizz
+pizza.category = 5 // reassign the value
+console.log(pizza) // print the new result
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -109,7 +112,19 @@ console.log(pizza)
 
 //CODE HERE
 
-
+const foodArr = { // create a new object
+    name: "Margherita",
+    price: 21,
+    category: "Vegetarian",
+    popularity: 4,
+    rating: 3,
+    tags: [
+        "red sauce",
+        "fresh mozza",
+        "basil",
+        "tomatoes"
+    ]
+}
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -125,8 +140,11 @@ console.log(pizza)
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
+
+const filteredFood = foodArr.filter((element) => {
+    return element.includes("red sauce");
+});
 
 
 //////////////////PROBLEM 5////////////////////
