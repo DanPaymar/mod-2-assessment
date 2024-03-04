@@ -161,7 +161,7 @@ console.log(newDiscount)
 
 //CODE HERE
 
-
+// no solution that works???
 
 // console.log(deals["desc"].replace("March", "April"))
 
