@@ -140,7 +140,7 @@ const foodArr = { // create a new object
 
 //CODE HERE
 
-
+// const filteredFood = foodArr.filter((ele) => ele['tags']) 
 
 const filteredFood = foodArr.filter((element) => {
     return element.includes("red sauce");
@@ -188,6 +188,18 @@ const filteredFood = foodArr.filter((element) => {
 
 //CODE HERE
 
+function filterByProperty(property, number, type) {
+     property = "rating, popularity, price"
+     number = 0
+     type = ["above", "below"]
+
+     const arr = filterByProperty.filter((foodArr) => {
+        foodArr === type {
+            return 'something'
+        }
+        
+     })
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -197,3 +209,5 @@ const filteredFood = foodArr.filter((element) => {
 */
 
 //CODE HERE
+
+filterByProperty()
