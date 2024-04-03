@@ -69,8 +69,8 @@ console.log(pizza.popularity)
 
 //CODE HERE
 
-console.log(pizza.tags) // log with dot notation
-console.log(pizza["price"]) // log with bracket
+console.log(pizza.tags[1]) // log with dot notation
+console.log(pizza.price) // log with bracket
 
 /*
     Third, destructure the price off of the
@@ -83,7 +83,7 @@ console.log(pizza["price"]) // log with bracket
 
 const { price } = pizza // take the price off pizza
 pizza.price = 35 // reassign the value
-console.log(pizza) // print the new result
+console.log(price) // print the new result
 
 /*
     Fourth, and last, destructure the category
@@ -96,7 +96,7 @@ console.log(pizza) // print the new result
 
 const { category } = pizza // take category off pizz
 pizza.category = 5 // reassign the value
-console.log(pizza) // print the new result
+console.log(category) // print the new result
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -112,19 +112,76 @@ console.log(pizza) // print the new result
 
 //CODE HERE
 
-const foodArr = { // create a new object
-    name: "Margherita",
-    price: 21,
-    category: "Vegetarian",
-    popularity: 4,
-    rating: 3,
-    tags: [
-        "red sauce",
-        "fresh mozza",
-        "basil",
-        "tomatoes"
-    ]
-}
+let foodArr = [ 
+    {
+        name: "Margherita",
+        price: 21,
+        category: "Vegetarian",
+        popularity: 4,
+        rating: 3,
+        tags: [
+            "red sauce",
+            "fresh mozza",
+            "basil",
+            "tomatoes"
+        ]
+    },
+    {
+        name: "Pepperoni",
+        price: 25,
+        category: "Meat",
+        popularity: 5,
+        rating: 6,
+        tags: [
+            "red sauce",
+            "fresh mozza",
+            "basil",
+            "pepperoni"
+        ]
+    },
+    {
+        name: "Pineapple",
+        price: 22,
+        category: "Vegetarian",
+        popularity: 4,
+        rating: 2,
+        tags: [
+            "red sauce",
+            "fresh mozza",
+            "basil",
+            "tomatoes",
+            "pineapple"
+        ]
+    },
+    {
+        name: "Sausage",
+        price: 24,
+        category: "Meat",
+        popularity: 5,
+        rating: 4,
+        tags: [
+            "red sauce",
+            "fresh mozza",
+            "sausage",
+            
+        ]
+    },
+    {
+        name: "Artichoke",
+        price: 25,
+        category: "Vegetarian",
+        popularity: 4,
+        rating: 5,
+        tags: [
+            "red sauce",
+            "fresh mozza",
+            "basil",
+            "tomatoes",
+            "artichoke"
+        ]
+    }
+]
+// console.log(foodArr)
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -140,12 +197,8 @@ const foodArr = { // create a new object
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter((ele) => ele['tags']) 
-
-const filteredFood = foodArr.filter((element) => {
-    return element.includes("red sauce");
-});
-
+let filteredFood = foodArr.filter( foodItem => foodItem.tags.includes("tomatoes"))
+console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /*

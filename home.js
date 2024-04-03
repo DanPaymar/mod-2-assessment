@@ -138,13 +138,9 @@ const deals = [
 
 //CODE HERE
 
-// access the deals array at 0 index and change the title
-let newDiscount = deals[0]
+newDeal = deals[0].title.replace("15%", "10%")
 
-// now update the key value 'title' to the new discount
-newDiscount["title"] = "Why don't you have 10% off"
-
-console.log(newDiscount)
+console.log(newDeal)
 
 /*
     The restaurant is going to continue its
@@ -161,16 +157,6 @@ console.log(newDiscount)
 
 //CODE HERE
 
-// no solution that works???
+deals[1].desc = deals[1].desc.replace("March", "April").trim()
 
-// console.log(deals["desc"].replace("March", "April"))
-
-// deals["desc"] = deals.replace("March", "April")
-// access the deals array at 1st index postion and change description
-// let newMonths = deals[1]
-
-// update the key value 'description' and remove whitespace
-// newMonths.replace("March", "April")
-
-// console.log(newMonths)
-// console.log(newMonths.replace("March", "April"))
+console.log(deals)
